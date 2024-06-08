@@ -1,0 +1,41 @@
+<div class="flex justify-center items-center">
+    <div class="container mx-auto px-8 py-12 max-w-sm rounded-xl">
+        <h1 class="text-2xl pb-8 text-white text-center mb-5">Register user</h1>
+        <form [formGroup]="formTask" (ngSubmit)="onSubmit()">
+            <div class="mb-5">
+                <label for="title" class="block mb-2 text-sm font-medium text-gray-900 ">Title</label>
+                <input formControlName="title"  type="text" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+            </div>
+            <div class="mb-5">
+                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 ">Description</label>
+                <input formControlName="description"  type="text" id="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+            </div>
+            <div class="flex flex-col mb-5">
+                <label for="priority" class="block mb-2 text-sm font-medium text-gray-900 ">Priority</label>
+                <select formControlName="priority" id="priority" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option class="mx-8">High</option>
+                    <option class="mx-8">Medium</option>
+                    <option class="mx-8">Low</option>
+                </select>
+            </div>
+            
+            <div class="flex flex-col mb-5">
+                <label for="status" class="block mb-2 text-sm font-medium text-gray-900 ">Status</label>
+                <div class="flex flex-row">
+                    <div class="flex items-center me-4">
+                        <input checked formControlName="status" id="active" type="radio" value="Active" name="status" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="active" class="ms-2 text-sm font-medium text-gray-900">Active</label>
+                    </div>
+                    <div class="flex items-center me-4">
+                        <input formControlName="status" id="finished" type="radio" value="Finished" name="status" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="finished" class="ms-2 text-sm font-medium text-gray-900">Finished</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create Task</button>
+            </div>
+        </form>
+    </div>
+</div>

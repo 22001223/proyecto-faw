@@ -1,0 +1,42 @@
+<nav>
+    <div  class="w-full flex flex-wrap items-center justify-between mx-auto py-4">
+        <div class="flex items-center space-x-8">
+            <div class="flex items-center">
+                <img
+                    src="../../../assets/universidad-galileo.png"
+                    class="h-10 mr-3"
+                    alt="Galileo Logo"
+                />
+                <span 
+                    class="self-center text-xl font-normal whitespace-nowrap">
+                    Task Center
+                </span>
+            </div>
+        </div>
+
+        <ul class="flex space-x-6">
+            <li>
+                <a
+                    routerLink="/tasks"
+                    routerLinkActive="underline"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    class="block hover:underline"
+                    aria-current="page"
+                    >Tasks</a
+                >
+            </li>
+            <li>
+                <a
+                    routerLink="/create-task"
+                    routerLinkActive="underline"
+                    class="block hover:underline"
+                    >Create Task</a
+                >
+            </li>
+        </ul>
+
+        <div class="flex items-center">
+            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" (click)="signOut()">Sing out</button>
+        </div>
+    </div>
+</nav>
